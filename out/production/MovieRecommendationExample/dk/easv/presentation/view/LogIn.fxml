@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
 
-<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
+<BorderPane focusTraversable="true" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
    <center>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="454.0">
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="454.0" style="-fx-background-color: #a80000;">
          <children>
             <GridPane layoutX="104.0" layoutY="49.0" prefHeight="110.0" prefWidth="245.0">
                <columnConstraints>
@@ -22,11 +25,19 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <PasswordField fx:id="passwordField" disable="true" GridPane.rowIndex="1" />
-                  <TextField fx:id="userId" text="Georgi Facello" />
+                  <MFXPasswordField fx:id="passwordField" floatingText="Password" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #040404;" text="481" textLimit="20" GridPane.rowIndex="1">
+                     <textFill>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                     </textFill>
+                  </MFXPasswordField>
+                  <MFXTextField fx:id="userId" floatingText="Username" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #040404;" text="Carlos Carloson" textLimit="20">
+                     <textFill>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                     </textFill>
+                  </MFXTextField>
                </children>
             </GridPane>
-            <GridPane layoutX="160.0" layoutY="159.0" prefHeight="30.0" prefWidth="133.0">
+            <GridPane layoutX="104.0" layoutY="159.0" prefHeight="52.0" prefWidth="250.0">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -35,10 +46,15 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" onAction="#logIn" text="Login" />
-                  <Button mnemonicParsing="false" onAction="#signUp" text="Signup" GridPane.columnIndex="1" />
+                  <MFXButton fx:id="loginButton" buttonType="RAISED" onAction="#logIn" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleColor="WHITE" text="Login" />
+                  <MFXButton fx:id="signupButton" buttonType="RAISED" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleBackgroundOpacity="0.1" rippleColor="WHITE" rippleRadius="10.0" rippleRadiusMultiplier="0.0" text="Signup" GridPane.columnIndex="1" />
                </children>
             </GridPane>
+            <ImageView fitHeight="53.0" fitWidth="122.0" layoutX="190.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../Desktop/image.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>

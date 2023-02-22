@@ -1,5 +1,6 @@
 package dk.easv.presentation.controller;
 
+import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,6 +23,7 @@ public class MainAppController implements Initializable {
 
     @FXML
     private TextField txfSearch;
+    private AppModel model;
 
     @FXML
     void getNewestMovies(ActionEvent event) {
@@ -35,6 +37,10 @@ public class MainAppController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+    }
+    public void setModel(AppModel model) {
+        this.model = model;
 
     }
 }
