@@ -70,7 +70,7 @@
             </MFXButton>
          </children>
       </AnchorPane>
-      <Label layoutX="137.0" layoutY="352.0" prefHeight="149.0" prefWidth="249.0" text="Label" textFill="#f40000">
+      <Label fx:id="labelImage" layoutX="137.0" layoutY="352.0" prefHeight="149.0" prefWidth="249.0" text="Label" textFill="#f40000">
          <font>
             <Font name="Bookman Old Style" size="54.0" />
          </font>

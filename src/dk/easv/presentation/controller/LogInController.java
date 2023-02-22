@@ -38,7 +38,7 @@ public class LogInController implements Initializable {
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("Movie Recommendation System 0.03 Beta");
+            stage.setTitle("BronzeFlix 0.3 Beta");
             stage.show();
             MainAppController controller = loader.getController();
 
