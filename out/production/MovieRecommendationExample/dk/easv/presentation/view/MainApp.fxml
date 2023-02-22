@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
-<?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -45,7 +44,7 @@
                   </RadialGradient>
                </textFill>
             </MFXButton>
-            <MFXButton fx:id="test1" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL1" layoutX="-77.0" layoutY="6.0" prefHeight="67.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="🏠">
+            <MFXButton fx:id="test1" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL1" layoutX="138.0" layoutY="5.0" prefHeight="67.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="🏠">
                <font>
                   <Font name="Chiller" size="34.0" />
                </font>
@@ -71,11 +70,6 @@
                   </RadialGradient>
                </textFill>
             </MFXButton>
-            <MFXTextField floatMode="BORDER" floatingText="Search..." layoutX="102.0" layoutY="16.0" prefHeight="49.0" prefWidth="207.0">
-               <font>
-                  <Font name="Courier New" size="20.0" />
-               </font>
-            </MFXTextField>
          </children>
       </AnchorPane>
    </children>
