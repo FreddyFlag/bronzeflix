@@ -1,69 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.Blend?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #040404;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MainAppController">
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.MainAppController">
    <children>
-      <AnchorPane prefHeight="32.0" prefWidth="600.0">
+      <AnchorPane prefHeight="32.0" prefWidth="600.0" style="-fx-background-color: #000000;">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="77.0" prefWidth="1269.0" text="BRONZEFLIX" textFill="#e84545">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="77.0" prefWidth="1280.0" text="BRONZEFLIX" textFill="#e84545">
                <font>
                   <Font name="Consolas Bold" size="56.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane id="control-frame" fx:id="anchorControlFrame" layoutX="-1.0" layoutY="73.0" prefHeight="73.0" prefWidth="1280.0" style="-fx-background-color: #c5c5c5;">
+      <AnchorPane id="control-frame" fx:id="anchorControlFrame" layoutX="-1.0" layoutY="62.0" prefHeight="84.0" prefWidth="1280.0" style="-fx-background-color: #c5c5c5;">
          <children>
-            <TextField fx:id="txfSearch" layoutX="7.0" layoutY="13.0" onKeyPressed="#searchMovies" prefHeight="46.0" prefWidth="233.0" promptText="Search..." style="-fx-background-color: white;" styleClass="menu-element" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="13.0">
-               <font>
-                  <Font size="20.0" />
-               </font>
-            </TextField>
             <ImageView fx:id="imageView" fitHeight="70.0" fitWidth="100.0" layoutX="1107.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="0.0" />
-            <Button alignment="CENTER" layoutX="500.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="381.0" style="-fx-background-color: transparent;" styleClass="menu-element" text="For you" textFill="BLACK">
+            <MFXButton fx:id="test" buttonType="RAISED" contentDisplay="CENTER" layoutX="500.0" layoutY="4.0" prefHeight="67.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="FOR YOU">
                <font>
-                  <Font name="Franklin Gothic Heavy" size="36.0" />
+                  <Font name="Century Gothic" size="34.0" />
                </font>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button layoutX="250.0" mnemonicParsing="false" onAction="#getNewestMovies" prefHeight="73.0" prefWidth="381.0" style="-fx-background-color: transparent;" styleClass="menu-element" text="Home" textFill="BLACK">
+               <textFill>
+                  <RadialGradient centerX="0.4907748655199564" centerY="0.5157728826962059" cycleMethod="REFLECT" radius="0.5648855398629458">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </MFXButton>
+            <MFXButton fx:id="test1" buttonType="RAISED" contentDisplay="CENTER" depthLevel="LEVEL1" layoutX="-77.0" layoutY="6.0" prefHeight="67.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="🏠">
                <font>
-                  <Font name="Franklin Gothic Heavy" size="36.0" />
+                  <Font name="Chiller" size="34.0" />
                </font>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button alignment="CENTER" layoutX="750.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="381.0" style="-fx-background-color: transparent;" styleClass="menu-element" text="Latest" textFill="BLACK">
+            </MFXButton>
+            <MFXButton fx:id="test2" buttonType="RAISED" contentDisplay="CENTER" layoutX="877.0" layoutY="4.0" prefHeight="67.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="LATEST">
                <font>
-                  <Font name="Franklin Gothic Heavy" size="36.0" />
+                  <Font name="Chiller" size="34.0" />
                </font>
-               <effect>
-                  <Glow />
-               </effect>
-            </Button>
-            <Button alignment="CENTER" cacheShape="false" focusTraversable="false" layoutX="227.0" layoutY="4.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="61.0" prefWidth="71.0" style="-fx-background-color: transparent;" text="🔍">
+               <textFill>
+                  <RadialGradient centerX="0.49077490686930414" centerY="0.5157728826962059" radius="0.5496183351706002">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </MFXButton>
+            <MFXTextField floatMode="BORDER" floatingText="Search..." layoutX="102.0" layoutY="16.0" prefHeight="49.0" prefWidth="207.0">
                <font>
-                  <Font size="24.0" />
+                  <Font name="Courier New" size="20.0" />
                </font>
-               <cursor>
-                  <Cursor fx:constant="NONE" />
-               </cursor>
-               <effect>
-                  <Blend />
-               </effect>
-            </Button>
+            </MFXTextField>
          </children>
       </AnchorPane>
    </children>
