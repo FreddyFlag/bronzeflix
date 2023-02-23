@@ -2,6 +2,8 @@
 
 <?import io.github.palexdev.materialfx.controls.MFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.RadialGradient?>
@@ -21,7 +23,7 @@
       </AnchorPane>
       <AnchorPane id="control-frame" fx:id="anchorControlFrame" layoutY="65.0" prefHeight="84.0" prefWidth="1280.0" style="-fx-background-color: #c5c5c5;">
          <children>
-            <MFXButton fx:id="forYou" buttonType="RAISED" contentDisplay="CENTER" layoutX="500.0" layoutY="1.0" onAction="#displayImage" prefHeight="83.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="FOR YOU">
+            <MFXButton fx:id="forYou" buttonType="RAISED" contentDisplay="CENTER" layoutX="500.0" layoutY="1.0" onAction="#displayImage" prefHeight="83.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="TOP MOVIES">
                <font>
                   <Font name="Century Gothic" size="34.0" />
                </font>
@@ -70,10 +72,20 @@
             </MFXButton>
          </children>
       </AnchorPane>
-      <Label fx:id="labelImage" layoutX="137.0" layoutY="352.0" prefHeight="149.0" prefWidth="249.0" text="Label" textFill="#f40000">
-         <font>
-            <Font name="Bookman Old Style" size="54.0" />
-         </font>
-      </Label>
+      <ImageView fitHeight="392.0" fitWidth="297.0" layoutX="77.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/covers/Seven.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="392.0" fitWidth="297.0" layoutX="488.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/covers/Django_Unchained.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="392.0" fitWidth="297.0" layoutX="900.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/covers/The_Matrix.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

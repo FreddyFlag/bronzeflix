@@ -18,20 +18,31 @@ import java.util.ResourceBundle;
 public class MainAppController implements Initializable {
 
     @FXML
-    public ImageView myImageView;
-    public MFXButton forYou;
+    private AnchorPane anchorControlFrame;
+
+    @FXML
+    private MFXButton forYou;
+
+    @FXML
+    private ImageView forYouMov1;
+
+    @FXML
+    private ImageView forYouMov2;
+
+    @FXML
+    private MFXButton test1;
+
+    @FXML
+    private MFXButton test2;
+
+    private AppModel model;
 
 
 
     public void displayImage(){
 
     }
-    @FXML
-    private AnchorPane anchorControlFrame;
 
-    @FXML
-    private TextField txfSearch;
-    private AppModel model;
     @FXML
     void getNewestMovies(ActionEvent event) {
 
@@ -39,6 +50,11 @@ public class MainAppController implements Initializable {
 
     @FXML
     void searchMovies(KeyEvent event) {
+
+    }
+
+    @FXML
+    void displayImage(ActionEvent event) {
 
     }
 
