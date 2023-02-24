@@ -3,15 +3,19 @@ package dk.easv.presentation.controller;
 import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
 import io.github.palexdev.materialfx.controls.MFXButton;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.net.URL;
@@ -67,6 +71,8 @@ public class MainAppController implements Initializable {
 
     @FXML
     private void goesToTopMovies(ActionEvent event) {
+        // Disable the button
+        ((Button)event.getSource()).setDisable(true);
         Random random = new Random();
 
         forYouLabel1.setText(forYouMovies.get(random.nextInt(forYouMovies.size())).getTitle());
@@ -95,9 +101,15 @@ public class MainAppController implements Initializable {
                 forYou1.setImage(getRandomImage(images, usedIndices, random1));
                 forYou2.setImage(getRandomImage(images, usedIndices, random1));
                 forYou3.setImage(getRandomImage(images, usedIndices, random1));
+
+                // part of the disable button
+                Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(2), e -> {
+                    ((Button)event.getSource()).setDisable(false);
+                }));
+                timeline.play();
+               }
             }
         }
-    }
 
     // helper class for above
     private Image getRandomImage(Image[] images, List<Integer> usedIndices, Random random) {
