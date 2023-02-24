@@ -12,7 +12,7 @@
 
 <BorderPane focusTraversable="true" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
    <center>
-      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="454.0" style="-fx-background-color: #a80000;">
+      <AnchorPane fx:id="logInBG" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="454.0" style="-fx-background-color: #040404;" stylesheets="@css/LogIn.css">
          <children>
             <GridPane layoutX="104.0" layoutY="49.0" prefHeight="110.0" prefWidth="245.0">
                <columnConstraints>
@@ -44,10 +44,11 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <MFXButton fx:id="loginButton" buttonType="RAISED" onAction="#logIn" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleColor="WHITE" text="Login" />
-                  <MFXButton fx:id="signupButton" buttonType="RAISED" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleBackgroundOpacity="0.1" rippleColor="WHITE" rippleRadius="10.0" rippleRadiusMultiplier="0.0" text="Signup" GridPane.columnIndex="1" />
+                  <MFXButton fx:id="logInButton" buttonType="RAISED" onAction="#logIn" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleColor="WHITE" stylesheets="@css/LogIn.css" text="Login" />
+                  <MFXButton fx:id="signUpButton" buttonType="RAISED" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleBackgroundOpacity="0.1" rippleColor="WHITE" rippleRadius="10.0" rippleRadiusMultiplier="0.0" stylesheets="@css/LogIn.css" text="Sign Up" GridPane.columnIndex="1" />
                </children>
             </GridPane>
+            <MFXTextField fx:id="WelcomeText" layoutX="80.0" prefHeight="49.0" prefWidth="293.0" text="Welcome To Bronzeflix" />
          </children>
       </AnchorPane>
    </center>

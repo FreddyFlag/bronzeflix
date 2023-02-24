@@ -23,7 +23,7 @@
       </AnchorPane>
       <AnchorPane id="control-frame" fx:id="anchorControlFrame" layoutY="65.0" prefHeight="84.0" prefWidth="1280.0" style="-fx-background-color: #c5c5c5;">
          <children>
-            <MFXButton fx:id="forYou" buttonType="RAISED" contentDisplay="CENTER" layoutX="500.0" layoutY="1.0" onAction="#displayImage" prefHeight="83.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="TOP MOVIES">
+            <MFXButton fx:id="forYou" buttonType="RAISED" contentDisplay="CENTER" layoutX="500.0" layoutY="1.0" onAction="#displayImage" prefHeight="83.0" prefWidth="269.0" rippleAnimateShadow="true" style="-fx-background-color: transparent;" text="FOR YOU">
                <font>
                   <Font name="Century Gothic" size="34.0" />
                </font>
@@ -72,20 +72,35 @@
             </MFXButton>
          </children>
       </AnchorPane>
-      <ImageView fitHeight="392.0" fitWidth="297.0" layoutX="77.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forYou1" fitHeight="392.0" fitWidth="297.0" layoutX="77.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@/covers/Seven.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="392.0" fitWidth="297.0" layoutX="488.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forYou2" fitHeight="392.0" fitWidth="297.0" layoutX="500.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@/covers/Django_Unchained.jpg" />
          </image>
       </ImageView>
-      <ImageView fitHeight="392.0" fitWidth="297.0" layoutX="900.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="forYou3" fitHeight="392.0" fitWidth="297.0" layoutX="900.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@/covers/The_Matrix.jpg" />
          </image>
       </ImageView>
+      <Label fx:id="forYouLabel1" layoutX="87.0" layoutY="485.0" opacity="0.8" prefHeight="132.0" prefWidth="275.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="forYouLabel2" layoutX="502.0" layoutY="485.0" opacity="0.8" prefHeight="132.0" prefWidth="275.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="forYouLabel3" layoutX="910.0" layoutY="485.0" opacity="0.8" prefHeight="132.0" prefWidth="275.0" text="Label" textFill="WHITE">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
