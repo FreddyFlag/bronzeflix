@@ -1,6 +1,7 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.presentation.model.AppModel;
+import io.github.palexdev.materialfx.controls.MFXButton;
 import io.github.palexdev.materialfx.controls.MFXPasswordField;
 import io.github.palexdev.materialfx.controls.MFXTextField;
 import javafx.animation.PauseTransition;
@@ -11,8 +12,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -26,14 +25,14 @@ import java.util.ResourceBundle;
 public class LogInController implements Initializable {
     @FXML private MFXPasswordField passwordField;
     @FXML private MFXTextField userId;
-
+    @FXML
+    private MFXButton logInButton;
     private AppModel model;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         model = new AppModel();
     }
-
 
 
     public void logIn(ActionEvent actionEvent) {
@@ -74,5 +73,6 @@ public class LogInController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password");
             alert.showAndWait();
         }
+
     }}
 

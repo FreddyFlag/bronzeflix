@@ -1,7 +1,7 @@
 #logInBG{
     -fx-background-color: #040404;
 }
-#logInButton,#signUpButton{
+#logInButton{
     -fx-width: 400px;
     -fx-height: 60px;
     -fx-background-color: #881515;

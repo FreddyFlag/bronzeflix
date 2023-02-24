@@ -38,19 +38,7 @@
                   </MFXTextField>
                </children>
             </GridPane>
-            <GridPane layoutX="104.0" layoutY="159.0" prefHeight="52.0" prefWidth="250.0">
-               <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-               </columnConstraints>
-               <rowConstraints>
-                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-               </rowConstraints>
-               <children>
-                  <MFXButton fx:id="logInButton" buttonType="RAISED" onAction="#logIn" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleColor="WHITE" stylesheets="@css/LogIn.css" text="Login" />
-                  <MFXButton fx:id="signUpButton" buttonType="RAISED" prefHeight="43.0" prefWidth="120.0" rippleAnimateShadow="true" rippleBackgroundOpacity="0.1" rippleColor="WHITE" rippleRadius="10.0" rippleRadiusMultiplier="0.0" stylesheets="@css/LogIn.css" text="Sign Up" GridPane.columnIndex="1" />
-               </children>
-            </GridPane>
+            <MFXButton fx:id="logInButton" buttonType="RAISED" computeRadiusMultiplier="false" depthLevel="LEVEL5" layoutX="105.0" layoutY="159.0" onAction="#logIn" prefHeight="52.0" prefWidth="243.0" rippleAnimateShadow="true" rippleBackgroundOpacity="1.0" rippleColor="WHITE" rippleRadiusMultiplier="64.0" stylesheets="@css/LogIn.css" text="Login" />
             <Text fill="#b3895b" layoutX="152.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BRONZEFLIX" wrappingWidth="166.77349853515625">
                <font>
                   <Font name="Blackadder ITC" size="20.0" />
