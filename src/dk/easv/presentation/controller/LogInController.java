@@ -51,7 +51,7 @@ public class LogInController implements Initializable {
                 controller.setModel(model);
 
                 // Display pop-up message
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Welcome to the bronze tier of netflix without the ability to watch movies... Enjoy!");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Welcome to the bronze tier of netflix without the ability to watch movies... Enjoy! 'Latest' will cycle for around 30 seconds. It will keep cycling till it's done.");
                 alert.setResizable(true);
                 alert.setTitle("BronzeFlix 0.3 Beta");
                 alert.setHeaderText("Welcome!");

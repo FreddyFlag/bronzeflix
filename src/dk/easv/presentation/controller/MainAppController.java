@@ -64,10 +64,66 @@ public class MainAppController implements Initializable {
     }
 
     @FXML
-    void goesToLatest(ActionEvent event) {
+    private void goesToLatest(ActionEvent event) {
+        // Disable the button
+        ((Button) event.getSource()).setDisable(true);
 
+        Timeline timeline = new Timeline();
+
+        // Set up the timeline to cycle 6 times over the course of 24 seconds
+        for (int i = 0; i < 10; i++) {
+            KeyFrame keyFrame = new KeyFrame(Duration.seconds(2 * i), e -> {
+                Random random = new Random();
+
+                forYouLabel1.setText(forYouMovies.get(random.nextInt(forYouMovies.size())).getTitle());
+                forYouLabel2.setText(forYouMovies.get(random.nextInt(forYouMovies.size())).getTitle());
+                forYouLabel3.setText(forYouMovies.get(random.nextInt(forYouMovies.size())).getTitle());
+
+                Random random1 = new Random();
+
+                // Set the folder containing the image files
+                File folder = new File("resources/covers");
+
+                // Get an array of files in the folder that have a .jpg or .jpeg extension
+                File[] imageFiles = folder.listFiles((dir, name) -> name.toLowerCase().endsWith(".jpg") || name.toLowerCase().endsWith(".jpeg"));
+
+                if (imageFiles != null && imageFiles.length > 0) {
+                    // Create an array of Image objects from the file paths
+                    Image[] images = Arrays.stream(imageFiles)
+                            .map(file -> new Image(file.toURI().toString()))
+                            .toArray(Image[]::new);
+
+                    if (images.length > 0) {
+                        List<Integer> usedIndices = new ArrayList<>();
+
+                        // Get a random image for each ImageView and ensure that each image is shown only once
+                        forYou1.setImage(getRandomImage1(images, usedIndices, random1));
+                        forYou2.setImage(getRandomImage1(images, usedIndices, random1));
+                        forYou3.setImage(getRandomImage1(images, usedIndices, random1));
+                    }
+                }
+            });
+
+            timeline.getKeyFrames().add(keyFrame);
+        }
+
+        // Enable the button after 24 seconds
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(24), e -> {
+            ((Button) event.getSource()).setDisable(false);
+        }));
+
+        timeline.play();
     }
 
+    // helper class for above
+    private Image getRandomImage1(Image[] images, List<Integer> usedIndices, Random random) {
+        int index;
+        do {
+            index = random.nextInt(images.length);
+        } while (usedIndices.contains(index));
+        usedIndices.add(index);
+        return images[index];
+    }
 
     @FXML
     private void goesToTopMovies(ActionEvent event) {
