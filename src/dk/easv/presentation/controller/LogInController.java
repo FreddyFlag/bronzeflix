@@ -51,7 +51,7 @@ public class LogInController implements Initializable {
                 controller.setModel(model);
 
                 // Display pop-up message
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Welcome to the bronze tier of netflix without the ability to watch movies... Enjoy! 'Latest' will cycle for around 30 seconds. It will keep cycling till it's done.");
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "Welcome to the bronze tier of netflix without the ability to watch movies... \n'Latest' will cycle for around 15 seconds. It will keep cycling till it's done... Enjoy! \n (This box will close itself after 12 seconds)");
                 alert.setResizable(true);
                 alert.setTitle("BronzeFlix 0.3 Beta");
                 alert.setHeaderText("Welcome!");
@@ -59,8 +59,8 @@ public class LogInController implements Initializable {
                 alert.getDialogPane().setMinHeight(200);
                 alert.show();
 
-               // Close the dialog after 8 seconds
-                PauseTransition delay = new PauseTransition(Duration.seconds(8));
+               // Close the dialog after 12 seconds
+                PauseTransition delay = new PauseTransition(Duration.seconds(12));
                 delay.setOnFinished(event -> alert.close());
                 delay.play();
 

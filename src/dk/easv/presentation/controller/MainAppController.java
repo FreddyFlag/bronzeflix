@@ -70,9 +70,9 @@ public class MainAppController implements Initializable {
 
         Timeline timeline = new Timeline();
 
-        // Set up the timeline to cycle 6 times over the course of 24 seconds
-        for (int i = 0; i < 10; i++) {
-            KeyFrame keyFrame = new KeyFrame(Duration.seconds(2 * i), e -> {
+        // Set up the timeline to cycle 5 times over the course of 15 seconds
+        for (int i = 0; i < 5; i++) {
+            KeyFrame keyFrame = new KeyFrame(Duration.seconds(3 * i), e -> {
                 Random random = new Random();
 
                 forYouLabel1.setText(forYouMovies.get(random.nextInt(forYouMovies.size())).getTitle());
