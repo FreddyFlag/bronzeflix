@@ -1,0 +1,21 @@
+#logInBG{
+    -fx-background-color: #040404;
+}
+#logInButton,#signUpButton{
+    -fx-width: 400px;
+    -fx-height: 60px;
+    -fx-background-color: #881515;
+    -fx-border-color: #040404;
+    -fx-font-family: 'Bodoni MT Black';
+    -fx-font-style: normal;
+    -fx-align-items: center;
+    -fx-text-align: center;
+    -fx-color: #040404;
+}
+#userId,#passwordField{
+    -fx-width: 250px;
+    -fx-height: 55px;
+    -fx-border-color: #881515;
+    -fx-font-family: 'Bodoni MT Black';
+
+}
