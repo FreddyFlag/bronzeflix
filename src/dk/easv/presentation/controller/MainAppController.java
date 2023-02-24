@@ -47,9 +47,26 @@ public class MainAppController implements Initializable {
 
     public List<Movie> forYouMovies;
 
-    @FXML
-    void getNewestMovies(ActionEvent event) {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        addHoverZoomEffect(forYou1);
+        addHoverZoomEffect(forYou2);
+        addHoverZoomEffect(forYou3);
 
+    }
+    private void addHoverZoomEffect(ImageView imageView) {
+        final double originalScale = imageView.getScaleX();
+        final double scaleFactor = 1.25;
+
+        imageView.setOnMouseEntered(event -> {
+            imageView.setScaleX(originalScale * scaleFactor);
+            imageView.setScaleY(originalScale * scaleFactor);
+        });
+
+        imageView.setOnMouseExited(event -> {
+            imageView.setScaleX(originalScale);
+            imageView.setScaleY(originalScale);
+        });
     }
 
     @FXML
@@ -177,10 +194,6 @@ public class MainAppController implements Initializable {
         return images[index];
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
     public void setModel(AppModel model) {
         model.loadData(model.getObsLoggedInUser());
 
@@ -192,4 +205,6 @@ public class MainAppController implements Initializable {
         forYouLabel3.setText(forYouMovies.get(2).getTitle());
 
     }
+
+
 }
